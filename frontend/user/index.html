@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Check Feature - Feature Flag System</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Check Feature Flag</h1>
+    <p class="subtitle">Select your organization and enter a feature key to check its status.</p>
+
+    <select id="orgSelect"><option value="">Select organization...</option></select>
+    <input id="featureKey" type="text" placeholder="feature_key (e.g. dark_mode)" />
+    <button onclick="checkFlag()">Check</button>
+
+    <div id="result" class="result hidden">
+      <p id="resultText"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

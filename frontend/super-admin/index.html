@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Super Admin - Feature Flag System</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Super Admin</h1>
+
+    <div id="loginBox">
+      <h2>Login</h2>
+      <input id="email" type="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p id="loginMsg" class="msg"></p>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <h2>Create Organization</h2>
+      <input id="orgName" type="text" placeholder="Organization name" />
+      <button onclick="createOrg()">Create</button>
+      <p id="orgMsg" class="msg"></p>
+
+      <h2>Organizations</h2>
+      <table id="orgTable">
+        <thead><tr><th>ID</th><th>Name</th><th>Created</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <button class="logout" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

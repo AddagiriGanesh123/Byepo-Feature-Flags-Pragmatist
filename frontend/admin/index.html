@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Org Admin - Feature Flag System</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Organization Admin</h1>
+
+    <div id="tabs">
+      <button class="tab active" id="tabLogin" onclick="showTab('login')">Login</button>
+      <button class="tab" id="tabSignup" onclick="showTab('signup')">Sign Up</button>
+    </div>
+
+    <div id="loginBox">
+      <input id="loginEmail" type="email" placeholder="Email" />
+      <input id="loginPassword" type="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p id="loginMsg" class="msg"></p>
+    </div>
+
+    <div id="signupBox" class="hidden">
+      <select id="signupOrg"><option value="">Select organization...</option></select>
+      <input id="signupEmail" type="email" placeholder="Email" />
+      <input id="signupPassword" type="password" placeholder="Password" />
+      <button onclick="signup()">Sign Up</button>
+      <p id="signupMsg" class="msg"></p>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <p id="orgLabel" class="org-label"></p>
+
+      <h2>Add Feature Flag</h2>
+      <input id="featureKey" type="text" placeholder="feature_key (e.g. dark_mode)" />
+      <button onclick="createFlag()">Add Flag</button>
+      <p id="flagMsg" class="msg"></p>
+
+      <h2>Feature Flags</h2>
+      <table id="flagTable">
+        <thead><tr><th>Key</th><th>Status</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <button class="logout" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
